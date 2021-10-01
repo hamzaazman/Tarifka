@@ -11,33 +11,22 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={Categories}>
+      <Stack.Navigator initialRouteName={Categories}
+        screenOptions={{
+          headerTitleAlign:"center"
+        }}
+      >
         <Stack.Screen
           name="Categories"
           component={Categories}
-          options={{
-            headerTintColor: "#fea500",
-            headerTitleAlign: "center",
-            headerTitleStyle: { fontWeight: "bold" },
-          }}
         />
         <Stack.Screen
           name="Meals"
           component={Meals}
-          options={{
-            headerTintColor: "#fea500",
-            headerTitleAlign: "center",
-            headerTitleStyle: { fontWeight: "bold" },
-          }}
         />
         <Stack.Screen
           name="Details"
           component={Details}
-          options={{
-            headerTintColor: "#fea500",
-            headerTitleAlign: "center",
-            headerTitleStyle: { fontWeight: "bold" },
-          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
